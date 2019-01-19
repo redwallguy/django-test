@@ -121,3 +121,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # ABSOLUTE path required
+
+# django-require settings
+REQUIRE_BASE_URL = 'django_test_app/js/lib'
+REQUIRE_JS = '../require.js'
+REQUIRE = DEBUG
+REQUIRE_ENVIRONMENT = 'auto'
