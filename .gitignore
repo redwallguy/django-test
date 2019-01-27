@@ -1,4 +1,6 @@
 .DS_Store
 *.txt
+!requirements.txt
 staticfiles
 __pycache__
+.env
