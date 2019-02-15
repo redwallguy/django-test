@@ -128,7 +128,3 @@ REQUIRE_BASE_URL = 'django_test_app/js/lib'
 REQUIRE_JS = '../require.js'
 REQUIRE = DEBUG
 REQUIRE_ENVIRONMENT = 'auto'
-
-#django-storages settings
-STATICFILES_STORAGE = 'require.storage.OptimizedManifestStaticFilesStorage'
-DEFAULT_FILE_STORAGE = STATICFILES_STORAGE

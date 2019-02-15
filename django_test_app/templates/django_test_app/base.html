@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  {% load static %}{% load require %}
+  {% load static %}
   {% block title %}
   <title>Test page</title>
   {% endblock %}
@@ -11,6 +11,6 @@
 </head>
 <body>
 <p>Hello there!</p>
-{% require_module '../main' %}
+<script data-main="{% static 'django_test_app/js/main.js'%}" src="{% static 'django_test_app/js/require.js'%}"></script>
 </body>
 </html>
