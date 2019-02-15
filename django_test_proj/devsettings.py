@@ -122,6 +122,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # ABSOLUTE path required
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # django-require settings
 REQUIRE_BASE_URL = 'django_test_app/js/lib'
@@ -130,7 +132,7 @@ REQUIRE = DEBUG
 REQUIRE_ENVIRONMENT = 'auto'
 
 #django-storages settings
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'django_test_proj.custom_storage.OptimizedS3Boto3Storage'
 DEFAULT_FILE_STORAGE = STATICFILES_STORAGE
 AWS_S3_ENDPOINT_URL = 'http://127.0.0.1:4572'
 AWS_ACCESS_KEY_ID = 'blah'
