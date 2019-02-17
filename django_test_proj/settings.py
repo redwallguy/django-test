@@ -121,10 +121,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # ABSOLUTE path required
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # ABSOLUTE path required
 
 # django-require settings
 REQUIRE_BASE_URL = 'django_test_app/js/lib'
 REQUIRE_JS = '../require.js'
 REQUIRE = DEBUG
 REQUIRE_ENVIRONMENT = 'auto'
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+#  AWS S3 settings
+AWS_STORAGE_BUCKET_NAME = 'com-devmoney-test'
+MEDIA_LOCATION = 'media'
