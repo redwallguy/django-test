@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,7 @@ SECRET_KEY = 'ce-27_6&pbyqu^7lh*(u%8x^=jeg)djf95t&z(%ay*nr6h7(g1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["com-devmoney-test.herokuapp.com"]
 
 
 # Application definition
@@ -134,3 +135,4 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 #  AWS S3 settings
 AWS_STORAGE_BUCKET_NAME = 'com-devmoney-test'
 MEDIA_LOCATION = 'media'
+django_heroku.settings(locals())
