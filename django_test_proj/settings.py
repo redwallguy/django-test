@@ -21,12 +21,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ce-27_6&pbyqu^7lh*(u%8x^=jeg)djf95t&z(%ay*nr6h7(g1'
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["com-devmoney-test.herokuapp.com"]
+ALLOWED_HOSTS = ["com-devmoney-test.herokuapp.com", "localhost"]
 
 
 # Application definition
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_test_app',
-    'require',
+    # 'require',
     'storages'
 ]
 
@@ -125,10 +125,10 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # ABSOLUTE path required
 
 # django-require settings
-REQUIRE_BASE_URL = 'django_test_app/js/lib'
-REQUIRE_JS = '../require.js'
-REQUIRE = DEBUG
-REQUIRE_ENVIRONMENT = 'auto'
+#REQUIRE_BASE_URL = 'django_test_app/js/lib'
+#REQUIRE_JS = '../require.js'
+#REQUIRE = DEBUG
+#REQUIRE_ENVIRONMENT = 'auto'
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 

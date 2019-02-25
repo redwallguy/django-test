@@ -1,0 +1,1 @@
+web: gunicorn -c config/gunicorn_local.py django_test_proj.wsgi

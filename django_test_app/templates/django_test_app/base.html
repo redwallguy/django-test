@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  {% load static %}
-  {% block title %}
-  <title>Test page</title>
-  {% endblock %}
-  {% block extra_css %}
-  <link rel="stylesheet" type="text/css" href="{% static 'django_test_app/css/base.css' %}">
-  {% endblock %}
+    {% load static %}
+    {% block title %}
+    <title>Test page</title>
+    {% endblock %}
+    {% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'django_test_app/css/base.css' %}">
+    {% endblock %}
 </head>
 <body>
 <p>Hello there!</p>
-<script data-main="{% static 'django_test_app/js/main.js'%}" src="{% static 'django_test_app/js/require.js'%}"></script>
+<script data-main="{% static 'django_test_app/js/data_mains/main.js'%}" src="{% static 'django_test_app/js/require.js'%}"></script>
 </body>
 </html>
