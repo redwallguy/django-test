@@ -37,7 +37,7 @@ flask-swagger==0.2.12
 future==0.17.1
 idna==2.8
 itsdangerous==1.1.0
-Jinja2==2.10
+Jinja2==2.11.3
 jmespath==0.9.3
 jsondiff==1.1.1
 jsonpath-rw==1.4.0
