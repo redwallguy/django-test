@@ -42,7 +42,7 @@ jmespath==0.9.3
 jsondiff==1.1.1
 jsonpath-rw==1.4.0
 jsonpickle==1.1
-localstack==0.8.10
+localstack==0.12.11
 localstack-client==0.6
 localstack-ext==0.8.6
 MarkupSafe==1.1.0
